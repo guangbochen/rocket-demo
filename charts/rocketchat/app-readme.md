@@ -1,0 +1,3 @@
+# Rocket.Chat
+
+Rocket.Chat is free, unlimited and open source. Replace email, HipChat & Slack with the ultimate team chat software solution.
