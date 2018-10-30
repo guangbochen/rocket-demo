@@ -13,7 +13,7 @@ keywords:
 - javascript
 - meteor
 home: https://rocket.chat/
-icon: https://cdn-www.rocket.chat/images/logo/logo.svg
+icon: https://pbs.twimg.com/profile_images/1016397063649660929/14EIApTi_400x400.jpg
 sources:
 - https://github.com/RocketChat/Docker.Official.Image/
 engine: gotpl
