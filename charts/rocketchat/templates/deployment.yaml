@@ -39,6 +39,12 @@ spec:
           - name: ROOT_URL
             value: https://{{ .Values.host }}
           {{ end }}
+          - name: ADMIN_USERNAME
+            value: {{ .Values.rocketchat.username }}
+          - name: ADMIN_PASS
+            value: {{ .Values.rocketchat.password }}
+          - name: ADMIN_EMAIL
+            value: {{ .Values.rocketchat.email }}
           ports:
             - containerPort: {{ .Values.service.internalPort }}
           livenessProbe:
@@ -58,9 +64,9 @@ spec:
     {{- end }}
       volumes:
       - name: rocket-data
-    {{- if .Values.persistence.enabled }}
-        persistentVolumeCliam:
+      {{- if .Values.persistence.enabled }}
+        persistentVolumeClaim:
           claimName: {{ template "rocketchat.fullname" . }}
-    {{- else }}
-      emptyDir: {}
-    {{- end }}
+      {{- else }}
+        emptyDir: {}
+      {{- end }}

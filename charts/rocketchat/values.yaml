@@ -95,3 +95,7 @@ persistence:
 #   requests:
 #     memory: 512Mi
 #     cpu: 300m
+rocketchat:
+  username: admin
+  password: admin
+  email: admin@example.com

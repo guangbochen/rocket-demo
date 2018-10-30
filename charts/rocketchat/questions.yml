@@ -1,0 +1,47 @@
+categories:
+- chat
+questions:
+- variable: persistence.enabled
+  default: false
+  label: Enable RocketChat Persistent Volume
+  type: boolean
+  description: "Enable RocketChat Persistent Volume"
+  show_subquestion_if: true
+  group: RocketChat
+  subquestions:
+    - variable: persistence.size
+      default: "5Gi"
+      label: RocketChat Volume Size
+      type: string
+    - variable: persistence.storageClass
+      default: ""
+      label: RocketChat Storage Class
+      type: storageclass
+- variable: mongodb.persistence.enabled
+  label: Enable MongoDB Persistent Volume
+  type: boolean
+  default: false
+  group: mongodb
+  description: "Enable MongoDB Persistent Volume"
+  show_subquestion_if: true
+  subquestions:
+    - variable: mongodb.persistence.size
+      default: "8Gi"
+      label: MongoDB Volume Size
+      type: string
+    - variable: mongodb.persistence.storageClass
+      default: ""
+      label: MongoDB Storage Class
+      type: storageclass
+- variable: rocketchat.username
+  default: admin
+  label: Admin Username
+  type: string
+- variable: rocketchat.password
+  default: admin
+  label: Admin Password
+  type: password
+- variable: rocketchat.email
+  default: admin@example.com
+  label: Admin Email
+  type: string
